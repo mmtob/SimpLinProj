@@ -7,4 +7,4 @@ include_HEADERS = header.h
 .PHONY: clean-all
 
 clean-all: clean uninstall
-	rm -rf .deps autom4te.cache aclocal.m4 compile config.log config.status configure depcomp func.o install-sh main main.o Makefile Makefile.in missing
+	find . -type f ! -name "*.c" ! -name "*.h" ! -name "*.ac" ! -name "*.am" ! -name "README.md" -exec rm -f {} +
